@@ -6,24 +6,24 @@ function analyzeMarks(marksObj) {
     let hightMark = -Infinity;
     let lowestMark = Infinity;
 
-    let highSubject =null;
-    let lowestSubject =null;
+    let highSubject = null;
+    let lowestSubject = null;
 
 
     for (let subject in marksObj) {
         let mark = marksObj[subject];
         total = total + mark;
 
-        if (mark > hightMark){
-             hightMark = mark;
-             highSubject= subject;
+        if (mark > hightMark) {
+            hightMark = mark;
+            highSubject = subject;
 
         }
-        else if(mark < lowestMark){
-            lowestMark =mark;
-            lowestSubject= subject;
+        if (mark < lowestMark) {
+            lowestMark = mark;
+            lowestSubject = subject;
         }
-           
+
     }
 
     console.log("heightMark ->", hightMark);
