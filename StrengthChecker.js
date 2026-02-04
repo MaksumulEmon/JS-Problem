@@ -31,7 +31,19 @@ function checkPassword(password) {
     }
 
     // console.log(reasons);
-    let isVaild =reasons.length ==0;
+
+    // Option 1
+    // let isVaild =reasons.length ==0;
+    let isVaild;
+    if(reasons.length  === 0){
+        isVaild=true;
+    }
+    else {
+        isVaild =false;
+    }
+
+
+
     // console.log(isVaild);
 
     return {
