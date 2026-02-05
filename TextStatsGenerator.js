@@ -1,24 +1,3 @@
-// function textStats(text) {
-
-//   let total = 0;
-
-//   for (let i = 0; i < text.length; i++) {
-//     let char = text[i];
-//     total =total+char;
-//   }
-
-
-
-//   console.log(total);
-
-
-//   return total;
-// }
-
-// textStats("JavaScript is fun to learn");
-
-
-
 function textStats(text) {
   let total = 0;
 
@@ -38,7 +17,7 @@ function textStats(text) {
       vowelCount++;
     }
 
-    if(vawels.includes(text[i]) == false && text[i]!==' '){
+    if (vawels.includes(text[i]) == false && text[i] !== ' ') {
       consonent++;
     }
   }
@@ -51,58 +30,11 @@ function textStats(text) {
     total,
     wordCount,
     vawel: vowelCount,
-    consonent:consonent,
+    consonent: consonent,
   }
 }
 
 let output = textStats(" I am OK ");
-// console.log(output);
+console.log(output);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function textStats(text) {
-
-    let characters = 0;
-    let vowels = 0;
-    let consonants = 0;
-    let vowelList = "aeiouAEIOU";
-
-    // Character, vowel, consonant count
-    for (let i = 0; i < text.length; i++) {
-        let ch = text[i];
-
-        if (ch !== " ") {          // exclude spaces
-            characters++;
-        }
-
-        if (vowelList.includes(ch)) {
-            vowels++;
-        }
-        else if (ch.match(/[a-zA-Z]/)) {   // letter but not vowel = consonant
-            consonants++;
-        }
-    }
-
-    // Word count (remove extra spaces)
-    let words = text.trim().split(/\s+/).length;
-
-    return { characters, words, vowels, consonants };
-}
-
-console.log(textStats("JavaScript is fun to learn"));
